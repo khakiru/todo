@@ -1,6 +1,6 @@
 {
-  "name": "SyncTasks",
-  "short_name": "SyncTasks",
+  "name": "Jomnam",
+  "short_name": "Jomnam",
   "description": "Offline-capable task manager with sections, countdowns, and drag-and-drop.",
   "start_url": "/",
   "display": "standalone",
