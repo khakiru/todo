@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SyncTasks - Home</title>
+<link rel="stylesheet" href="css/home.css">
+<meta name="theme-color" content="#2196F3">
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar">
+    <h1>To-Do by Khaki</h1>
+    
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Links -->
+    <div class="nav-links">
+        <button class="secondary" onclick="location.href='settings.html'">Settings</button>
+    </div>
+    </nav>
+
+  <!-- Add Section -->
+  <div class="section-inputs">
+    <input type="text" id="newSectionInput" placeholder="New Section Name">
+    <input type="color" id="newSectionColor" value="#2196F3">
+    <button class="primary" onclick="addSection()">Add Section</button>
+  </div>
+
+  <!-- Sections Container -->
+  <div id="sectionsContainer"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    renderHomeSections();
+  </script>
+</body>
+</html>

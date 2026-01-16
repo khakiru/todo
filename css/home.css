@@ -1,0 +1,199 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Navbar links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Unified Button Styles */
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Primary Button (Add Section) */
+button.primary {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+button.primary:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+/* Secondary Button (Settings) */
+button.secondary {
+    background-color: #fff;
+    color: #2196F3;
+    border: 2px solid #2196F3;
+}
+
+button.secondary:hover {
+    background-color: #e3f2fd;
+    transform: translateY(-2px);
+}
+
+/* Section Inputs */
+.section-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 1rem;
+    border-radius: 12px;
+}
+
+.section-inputs input[type="text"] {
+    flex: 2;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.section-inputs input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Sections Container */
+#sectionsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+/* Section Card */
+.section-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.section-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-links {
+        display: none; /* hide links initially */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hamburger spacing */
+    .hamburger div {
+        margin: 3px 0;
+    }
+
+    .navbar h1 {
+        font-size: 1.3rem;
+    }
+
+    .navbar button.secondary {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Responsive Section Inputs */
+@media (max-width: 600px) {
+    .section-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

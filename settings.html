@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SyncTasks - Settings</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/setting.css">
+<meta name="theme-color" content="#2196F3">
+</head>
+<body>
+<nav class="navbar">
+  <button onclick="history.back()">← Back</button>
+  <h1>Settings</h1>
+</nav>
+
+<div class="settings-container">
+  <h2>Notifications</h2>
+  <button onclick="requestNotifications()">Enable Notifications</button>
+
+  <h2>Reset App</h2>
+  <button onclick="resetApp()">Delete All Sections & Tasks</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
